@@ -24,10 +24,10 @@ jobs:
            \cp -pdr TVBoxOSC/tvbox/* ./
            rm -rf xiaosa.zip TVBoxOSC
         shell: bash
-    #   - name: Move files to publish directory
-    #     run: |
-    #       mkdir -p publish
-    #       \cp *.txt ./publish/
+      - name: Move files to publish directory
+        run: |
+          mkdir -p publish
+          \cp *.txt ./publish/
       - name: Git push assets to "release" branch
         run: |
           git config --local user.name "github-actions[bot]"
